@@ -15,19 +15,20 @@ public class BallBounce : MonoBehaviour
         float racketHeight = collision.collider.bounds.size.y;
 
         float positionX;
-        float positionY = (ballposition.y - racketPosition.y) / racketHeight;
         if(collision.gameObject.name == "Player Racket 1"){
             positionX = 1;
         }else{
             positionX = -1;
         }
 
-        ballMovement.increasetHitCount();
+        float positionY = (ballposition.y - racketPosition.y) / racketHeight;
+        ballMovement.increaseHitCount();
         ballMovement.MoveBall(new Vector2(positionX, positionY));
 
     }
  
-    private void OnCollisionDetect(Collision2D collision){
+    private void OnCollisionEnter2D(Collision2D collision){
+        Debug.Log("hi");
         if(collision.gameObject.name == "Player Racket 1" || collision.gameObject.name == "Racket 2"){
             Bounce(collision);
         }
