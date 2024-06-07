@@ -10,6 +10,7 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private float extraSpeed;
     // This is used to constrain the increase in speed beyond the initial startSpeed.
     [SerializeField] private float maxExtraSpeed;
+    public bool player1_start = true;
 
     private int number_of_hit = 0;
     private Rigidbody2D rigidb;
@@ -23,11 +24,25 @@ public class BallMovement : MonoBehaviour
 
     }
 
-    public IEnumerator LaunchMovement(){
+    public void ResetBall(){
+        rigidb.velocity = new Vector2(0,0);
+        transform.position = new Vector2(0,0);
+        number_of_hit = 0;
+        
+    }
 
+    public IEnumerator LaunchMovement(){
+        ResetBall();
         number_of_hit = 0;
         yield return new WaitForSeconds(1);
-        MoveBall(new Vector2(-1, 0));
+        // If player 1 start is true, meaning player 1 is starting, the ball will move to the left
+        if(player1_start == true){
+            MoveBall(new Vector2(-1, 0));
+        // Second player, we send ball to the right
+        }else{
+            MoveBall(new Vector2(1, 0));
+        }
+    
     }
 
     public void MoveBall(Vector2 direction_of_ball){
@@ -46,10 +61,4 @@ public class BallMovement : MonoBehaviour
         }
     }
 
-    public void ResetBall(){
-        rigidb.velocity = new Vector2(0,0);
-        transform.position = new Vector2(0,0);
-        number_of_hit = 0;
-        
-    }
 }

@@ -39,9 +39,15 @@ public class BallBounce : MonoBehaviour
         }
         if(collision.gameObject.name == "Left Border"){
            score.Player2Scores();
+           // Since player 2 Scored, player 1 will be the one to start the game next time
+           ballMovement.player1_start = true;
+           StartCoroutine(ballMovement.LaunchMovement());
         }
         if(collision.gameObject.name == "Right Border"){
             score.Player1Scores();
+            // Since player 1 Scored, player 2 will be the one to start the game next time
+            ballMovement.player1_start = false;
+            StartCoroutine(ballMovement.LaunchMovement());
         }
     }
 }
