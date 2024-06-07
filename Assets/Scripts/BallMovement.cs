@@ -35,8 +35,6 @@ public class BallMovement : MonoBehaviour
         direction_of_ball = direction_of_ball.normalized;
         // The more hit you get, the more fast the ball is
         float currentSpeed = startSpeed + (number_of_hit * extraSpeed);
-        Debug.Log("speed: "+ currentSpeed);
-        Debug.Log("hit : "+ number_of_hit);
 
 
         rigidb.velocity = direction_of_ball * currentSpeed;
@@ -48,4 +46,10 @@ public class BallMovement : MonoBehaviour
         }
     }
 
+    public void ResetBall(){
+        rigidb.velocity = new Vector2(0,0);
+        transform.position = new Vector2(0,0);
+        number_of_hit = 0;
+        
+    }
 }
