@@ -5,11 +5,11 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
 
-    public float startSpeed;
+    [SerializeField] private float startSpeed;
     // So that when ball hits, it gains speed and it isn't just continues.
-    public float extraSpeed;
+    [SerializeField] private float extraSpeed;
     // This is used to constrain the increase in speed beyond the initial startSpeed.
-    public float maxExtraSpeed;
+    [SerializeField] private float maxExtraSpeed;
 
     private int number_of_hit = 0;
     private Rigidbody2D rigidb;
