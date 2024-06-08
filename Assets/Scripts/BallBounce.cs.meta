@@ -3,7 +3,10 @@ guid: ab274fa97df4340a4ade23900f7455e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ballMovement: {instanceID: 0}
+  - score: {instanceID: 0}
+  - hitAudioSource: {fileID: 314329921862838609, guid: 2747fe332d7524fd0b58dac848f3c1d7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

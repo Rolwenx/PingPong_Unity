@@ -5,15 +5,23 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private bool isAI;
+    [SerializeField] public bool isAI;
     [SerializeField] private float speed;
     [SerializeField] private GameObject ball;
     private Rigidbody2D rigidb;
     private Vector2 playerMove;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
+        if(isAI){
+            PlayerPrefs.SetString("isAI", "True");
+        }else{
+            PlayerPrefs.SetString("isAI", "False");
+        }
+        
         rigidb = GetComponent<Rigidbody2D>();
     }
 
@@ -56,4 +64,5 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate(){
         rigidb.velocity = playerMove * speed;
     }
+
 }

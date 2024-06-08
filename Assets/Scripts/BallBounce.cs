@@ -8,6 +8,16 @@ public class BallBounce : MonoBehaviour
     public BallMovement ballMovement;
     public ScoreManagement score;
 
+    public GameObject hit_music;
+    private SFXSlider sfxSlider;
+
+    private void Start()
+    {
+        sfxSlider = FindObjectOfType<SFXSlider>(); // Find and store the SFXSlider script
+    }
+
+
+
     private void Bounce(Collision2D collision){
         // We get the position of the ball
         Vector3 ballposition = transform.position;
@@ -31,11 +41,13 @@ public class BallBounce : MonoBehaviour
         ballMovement.increaseHitCount();
         ballMovement.MoveBall(new Vector2(positionX, positionY));
 
+
     }
  
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.name == "Racket 1" || collision.gameObject.name == "Racket 2"){
             Bounce(collision);
+
         }
         if(collision.gameObject.name == "Left Border"){
            score.Player2Scores();
@@ -49,5 +61,19 @@ public class BallBounce : MonoBehaviour
             ballMovement.player1_start = false;
             StartCoroutine(ballMovement.LaunchMovement());
         }
+
+        // Create the hit music object
+        GameObject hitMusicObj = Instantiate(hit_music, transform.position, transform.rotation);
+        // Get the AudioSource component from the hit music object
+        AudioSource hitMusicAudioSource = hitMusicObj.GetComponent<AudioSource>();
+        // If the hit music audio source exists and the SFXSlider script is found
+        if (hitMusicAudioSource != null && sfxSlider != null)
+        {
+            // Set the volume of the hit music audio source based on the stored SFX volume
+            hitMusicAudioSource.volume = sfxSlider.getVolume();
+        }
+        
     }
+
+
 }
