@@ -2,33 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
 
-    private PlayerMovement player;
     [SerializeField] private TextMeshProUGUI result_Text;
-    private string text_to_display;
+    private string textToDisplay;
 
     void Start()
     {
 
+        DisplayResult();
+    }
+
+
+    private void DisplayResult()
+    {
         string winner = PlayerPrefs.GetString("Winner");
         string isAI = PlayerPrefs.GetString("isAI");
 
-        if(winner == "Player 1"){
-            text_to_display = "Player 1 has won";
+        if (winner == "Player 1")
+        {
+            textToDisplay = "Player 1 has won";
         }
-        else{
-            if (isAI == "True"){
-                text_to_display = "AI has won";
+        else
+        {
+            if (isAI == "True")
+            {
+                textToDisplay = "AI has won";
             }
-            else{
-                text_to_display = "Player 2 has won";
+            else
+            {
+                textToDisplay = "Player 2 has won";
             }
         }
-        result_Text.text = text_to_display;
+
+        result_Text.text = textToDisplay;
     }
 
+    public void Replay()
+        {
+            string isAI = PlayerPrefs.GetString("isAI");
+
+
+            if (isAI == "True")
+            {
+                SceneManager.LoadScene(3);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
+        }
 
 }

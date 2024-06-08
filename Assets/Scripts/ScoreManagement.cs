@@ -33,12 +33,12 @@ public class ScoreManagement : MonoBehaviour
         if (player1_score == scoreToReach)
         {
             PlayerPrefs.SetString("Winner", "Player 1");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
         else if (player2_score == scoreToReach)
         {
             PlayerPrefs.SetString("Winner", "Player 2");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 }
