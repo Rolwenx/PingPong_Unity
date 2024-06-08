@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ChoiceSceneController : MonoBehaviour
 {
+    // 1 = 1P
+    // 2 = 2P
     public void SetGameMode(int mode)
     {
         PlayerPrefs.SetInt("GameMode", mode);
+        SceneManager.LoadScene(6);
     }
+
 }
