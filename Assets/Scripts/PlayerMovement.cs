@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] public bool isAI;
+    [SerializeField] private bool isAI;
     [SerializeField] private float speed;
     [SerializeField] private GameObject ball;
     private Rigidbody2D rigidb;
