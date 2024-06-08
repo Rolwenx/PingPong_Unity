@@ -1377,6 +1377,58 @@ MonoBehaviour:
   isAI: 1
   speed: 6.5
   ball: {fileID: 1542693603}
+--- !u!1 &852821156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852821158}
+  - component: {fileID: 852821157}
+  m_Layer: 0
+  m_Name: Effects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &852821157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852821156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011aca242653b41d4a355744e42b5c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpPrefabs:
+  - {fileID: 723667065892328842, guid: 0195094924a544226bcc4e962f5fbc2e, type: 3}
+  - {fileID: 723667065892328842, guid: 85b3206379e8f48b7a9f9d0d7c693bb0, type: 3}
+  - {fileID: 723667065892328842, guid: 656b1a2fb53c34e639e896927a2c70aa, type: 3}
+  spawnInterval: 10
+  spawnRange: 5
+  topBorder: {fileID: 910575978}
+  bottomBorder: {fileID: 0}
+--- !u!4 &852821158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852821156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.25, y: 5.57, z: -0.013413048}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878035240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,3 +3151,4 @@ SceneRoots:
   - {fileID: 475057604}
   - {fileID: 122809432}
   - {fileID: 1677572553}
+  - {fileID: 852821158}

@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpSpawner : MonoBehaviour
 {
-    
-    public GameObject[] powerUpPrefabs; 
+    public GameObject[] powerUpPrefabs; // Array to hold your power-up prefabs
     public float spawnInterval = 10f; // Interval between power-up spawns
     public float spawnRange = 5f; // Range along the top of the screen to spawn power-ups
     public Transform topBorder; // Transform of the top border of the screen
+    public Transform bottomBorder; // Transform of the bottom border of the screen
 
     private float nextSpawnTime;
 
@@ -35,6 +33,4 @@ public class PowerUpSpawner : MonoBehaviour
             nextSpawnTime = Time.time + spawnInterval;
         }
     }
-
-    
 }
