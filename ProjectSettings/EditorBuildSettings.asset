@@ -9,15 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 93c02b3a9912943dea7b137ba0362a07
+    path: Assets/Scenes/Game Mode Choice.unity
+    guid: 679aa969a1e784a1a913cf066be4d234
   - enabled: 1
     path: Assets/Scenes/Pong Game_2P.unity
     guid: 742ffb00846f5458e871881cb87abe4f
   - enabled: 1
+    path: Assets/Scenes/Pong Game_AI.unity
+    guid: 4883b99ce2fab419cb236d03469b22a6
+  - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 1e2f7950ba425442388216076043121d
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 93c02b3a9912943dea7b137ba0362a07
+  - enabled: 0
     path: Assets/Scenes/Music.unity
     guid: 2bb85d0147a474a61973b4db8084d8d6
   m_configObjects: {}
