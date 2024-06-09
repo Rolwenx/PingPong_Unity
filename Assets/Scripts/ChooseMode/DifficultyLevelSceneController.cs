@@ -14,19 +14,18 @@ public class DifficultyLevelSceneController : MonoBehaviour
     private void LoadGameplayScene()
     {
         int gameMode = PlayerPrefs.GetInt("GameMode", 1);
-        string difficulty = PlayerPrefs.GetString("Difficulty", "Normal"); 
 
         string sceneName = "";
 
         // 1 player
         if (gameMode == 1)
         {
-            sceneName = "PingPong1P_" + difficulty;
+            sceneName = "PingPong1P";
         }
         // 2 Player
         else
         {
-            sceneName = "PingPong2P_" + difficulty;
+            sceneName = "PingPong2P";
         }
 
 

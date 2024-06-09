@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Mode Choice.unity
     guid: 679aa969a1e784a1a913cf066be4d234
   - enabled: 1
-    path: Assets/Scenes/Difficulty2P/PingPong2P_Normal.unity
+    path: Assets/Scenes/Difficulty2P/PingPong2P.unity
     guid: 742ffb00846f5458e871881cb87abe4f
   - enabled: 1
-    path: Assets/Scenes/Difficulty1P/PingPong1P_Normal.unity
+    path: Assets/Scenes/Difficulty1P/PingPong1P.unity
     guid: 4883b99ce2fab419cb236d03469b22a6
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
