@@ -115,8 +115,4 @@ public class BallMovement : MonoBehaviour
         number_of_hit++;
         OnBallHit?.Invoke(number_of_hit); // Trigger the event with the number of hits
     }
-
-    void Update(){
-        Debug.Log(currentSpeed);
-    }
 }

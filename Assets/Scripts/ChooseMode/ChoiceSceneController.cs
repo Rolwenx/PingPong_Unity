@@ -7,6 +7,7 @@ public class ChoiceSceneController : MonoBehaviour
 {
     // 1 = 1P
     // 2 = 2P
+    // 0 = AI
     public void SetGameMode(int mode)
     {
         PlayerPrefs.SetInt("GameMode", mode);

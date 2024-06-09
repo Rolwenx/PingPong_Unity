@@ -29,10 +29,10 @@ public class SFXSlider : MonoBehaviour
 
     private void ApplyVolume()
     {
-        // Iterate through all SFX audio sources and set their volumes
+        // We terate through all SFX audio sources and set their volumes
         foreach (AudioSource audioSource in sfxAudioSources)
         {
-            audioSource.volume = storedVolume; // Line 41
+            audioSource.volume = storedVolume; 
         }
     }
 
@@ -54,7 +54,7 @@ public class SFXSlider : MonoBehaviour
     // Method to set the volume externally (e.g., when the game is paused)
     public void SetVolume(float volume)
     {
-        storedVolume = volume; // Store the volume value
-        ApplyVolume(); // Apply the volume to the SFX audio sources
+        storedVolume = volume; 
+        ApplyVolume(); 
     }
 }

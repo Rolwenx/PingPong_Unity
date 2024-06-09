@@ -22,10 +22,12 @@ public class DifficultyLevelSceneController : MonoBehaviour
         {
             sceneName = "PingPong1P";
         }
-        // 2 Player
-        else
+        else if(gameMode == 2)
         {
             sceneName = "PingPong2P";
+        }
+        else{
+            sceneName = "PingPongAI";
         }
 
 

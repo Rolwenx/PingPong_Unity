@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Difficulty choice.unity
     guid: 876c8a422c2f74714a7390e7ba20833b
+  - enabled: 1
+    path: Assets/Scenes/Difficulty0P/PingPongAI.unity
+    guid: 23eca24fa25024e19bccd776bd3c3dcc
   - enabled: 0
     path: Assets/Scenes/Music.unity
     guid: 2bb85d0147a474a61973b4db8084d8d6
