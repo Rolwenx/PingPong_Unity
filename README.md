@@ -7,3 +7,5 @@ Easy Ping Pong game made with Unity
 4. Launch the .exe or the .app
 
 The game supports both macOS Intel AND Silicon.
+
+Itch.io link for easier more details, downloads files and WebGL playable window : https://dorytoss.itch.io/ping-pong-game 
