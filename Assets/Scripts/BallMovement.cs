@@ -10,10 +10,7 @@ public class BallMovement : MonoBehaviour
 
     [SerializeField] private float startSpeed;
     [SerializeField] private float extraSpeed;
-    // So that when ball hits, it gains speed and it isn't just continues.
-    //[SerializeField] private float extraSpeed;
-    // This is used to constrain the increase in speed beyond the initial startSpeed.
-    //[SerializeField] private float maxExtraSpeed;
+
     public bool player1_start = true;
     private float currentSpeed;
 

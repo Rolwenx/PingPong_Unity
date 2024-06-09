@@ -83,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
             case Difficulty.Impossible:
                 baseSpeed = isAI ? 60f : 50f;
                 speedIncrement = isAI ? 0.05f : 0.3f;
-                speedIncrement = 0.8f;
                 break;
         }
     }
@@ -92,11 +91,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(isAI){
             AIMove();
-            Debug.Log("AI "+ (baseSpeed + number_of_hit * speedIncrement));
+            Debug.Log("AI speed: " + rigidb.velocity.magnitude);
+
         }
         else{
             PlayerMove();
-            Debug.Log("player "+ (baseSpeed + number_of_hit * speedIncrement));
+            Debug.Log("player: " + rigidb.velocity.magnitude);
         }
 
     }
@@ -108,7 +108,9 @@ public class PlayerMovement : MonoBehaviour
         // Set the y-coordinate of the player's position to match the y-coordinate of the mouse position
         Vector2 playerPosition = new Vector2(transform.position.x, mousePosition.y);
         // Calculate the direction towards the mouse
-        //playerMove = (playerPosition - rigidb.position).normalized;
+        // Calculate the direction towards the mouse
+        playerMove = (playerPosition - rigidb.position);
+        // Update the player's position
         rigidb.MovePosition(playerPosition);
         
     }
@@ -129,33 +131,10 @@ public class PlayerMovement : MonoBehaviour
         else{
             playerMove = new Vector2(0,0);
         }
-        rigidb.MovePosition(rigidb.position + playerMove * Time.fixedDeltaTime * (baseSpeed + number_of_hit * speedIncrement));
     }
-/*
-    private void AIMove()
-    {
-        Vector2 moveDirection = Vector2.zero;
-
-        // If the ball is above the AI racket
-        if (ball.transform.position.y > transform.position.y + 0.5f)
-        {
-            moveDirection = Vector2.up;
-        }
-        // If the ball is below the racket
-        else if (ball.transform.position.y < transform.position.y - 0.5f)
-        {
-            moveDirection = Vector2.down;
-        }
-
-        // Update the position of the racket
-        rigidb.MovePosition(rigidb.position + moveDirection * Time.fixedDeltaTime * (baseSpeed + number_of_hit * speedIncrement));
-    }*/
-
     private void FixedUpdate()
     {
-        if(isAI){
-            rigidb.velocity = playerMove * (baseSpeed + number_of_hit * speedIncrement);
-        }
+        rigidb.velocity = playerMove * (baseSpeed + number_of_hit * speedIncrement);
     }
 
     private void UpdateRacketSpeed(int numberOfHits)
