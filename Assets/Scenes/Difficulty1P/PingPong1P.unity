@@ -1087,8 +1087,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAI: 0
   ball: {fileID: 1542693603}
+  aiVsAiMode: 0
   baseSpeed: 0
   speedIncrement: 0.3
+  reactionTime: 0.5
 --- !u!1 &775470144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,8 +1381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAI: 1
   ball: {fileID: 1542693603}
+  aiVsAiMode: 0
   baseSpeed: 0
   speedIncrement: 0.3
+  reactionTime: 0.5
 --- !u!1 &844823064
 GameObject:
   m_ObjectHideFlags: 0
