@@ -2,10 +2,8 @@
 Easy Ping Pong game made with Unity
 
 # Download & Play
-1. Go to the Builds folder
-2. Choose your computer's OS (operating system)
-4. Launch the .exe or the .app
+1. Go to the Itch.io page for the game:
+👉 https://dorytoss.itch.io/ping-pong-game
+2. Play directly in the browser via WebGL (no install needed!) or install if wanted.
 
 The game supports both macOS Intel AND Silicon.
-
-Itch.io link for easier more details, downloads files and WebGL playable window : https://dorytoss.itch.io/ping-pong-game 
